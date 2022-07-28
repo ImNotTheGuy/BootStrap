@@ -1,7 +1,6 @@
 # Introduction to bootstrap
 
-Helps the developer avoid spending too much time on design and writing CSS. It keeps a coherent design system accross the web/mobile - app 
-
+Helps the developer avoid spending too much time on design and writing CSS. It keeps a coherent design system accross the web/mobile - app
 
 ## Project organization
 
@@ -13,14 +12,14 @@ New folder [page](/css/page/) where we put the CSS specific to certain HTML page
 
 New file [style.css](/css/style.css) where we'll put the CSS code shared throughout the webpages of our projects.
 
-## Import bootstrap in the HTML
+## Import Bootstrap in the HTML
 
 To use the bootstrap CSS file, simply add a link to the head of the HTML:
- ```<link rel="stylesheet" href="/css/vendor/bootstrap.min.css">```
+`<link rel="stylesheet" href="/css/vendor/bootstrap.min.css">`
 
- ## Import bootstrap using CDN
+## Import Bootstrap using CDN
 
- Same as above but replace the code with: 
+Same as above but replace the code with:
 
 ```
     <link
@@ -33,9 +32,36 @@ To use the bootstrap CSS file, simply add a link to the head of the HTML:
 
 The advantage of CDN import is that the bootstrap file will be as close as possible as the client. This can reduce load time if for instance a French client requests a US server. The CDN bootstrap is hosted on multiple servers. Therefore the client will load the web page from the US server, but will load the CSS from it's French server. Can be meaningful for slower connections.
 
+## Responsive Layout
 
+Bootstrap can easily make a layout responsive. The layout will dynamically change depending on the screen size of the client.
 
+### Bootstrap grid-layout
 
+In bootstrap, the 3 blocks should all be child of the parent element, called the _container_.
 
+The direct children of a container is called a _row_.
 
+In each row, we can have different columns called a _col_.
 
+Each element: `container`, `row` and `col` are the names used in Bootstrap
+
+Tip: in VsCode with the .emmet extension, if you type `.row*3` for example, it will create 3 `<div>s` with the class row 3 times. you can also do it with multiple class at once: `.row.another-class*3`
+
+### Overriding Bootstrap classes
+
+To do that, add another `<link>` **below** the bootstrap the import and reference your own `style.css` file, as follows:
+
+`<link rel="stylesheet" href="/css/style.css">`
+
+Then, write normal CSS referencing the same name of the class you wish to override. For example:
+
+```
+.row{
+    margin: 10px;
+    padding: 15px;
+    background-color: lightblue;
+}
+```
+
+This will override the `row` class of bootstrap on defined attributes, but will keep it's core working. 
