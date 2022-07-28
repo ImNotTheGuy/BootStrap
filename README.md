@@ -64,4 +64,27 @@ Then, write normal CSS referencing the same name of the class you wish to overri
 }
 ```
 
-This will override the `row` class of bootstrap on defined attributes, but will keep it's core working. 
+This will override the `row` class of bootstrap on defined attributes, but will keep it's core working.
+
+
+### Combining multiple classes
+
+In our example, we can combine the `col` class with a personal class called `topic`. This will keep the grid-layout of the `col` class but will add caracteristics of the `topic` class: `<div class="col topic">`
+
+
+tip: *on Firefox, to change the layout to mobile devices, use *`CTRL + SHIFT + M` *and select the device you want* 
+
+
+### Bootstrap grid layout specifications
+
+By default, 1 `row` is comprised of 12 `col`. If you have only 4 elements, each `col` will actually be 3 columns.
+
+To override this, you can specify how many columns for each `col` element you want using: `<div class="col-n">`
+
+For different screen types, you can specify the behaviour of the layout by using screen size suffixes 
+- `-lg`: large
+- `-md`: medium
+- `-sm`: small
+- `-xs`: extra-small
+
+Used as follows: `<div class="col-lg-3 col-md-6 col-sm-9 col-xs-12"> `
