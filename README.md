@@ -31,6 +31,8 @@ To use the bootstrap CSS file, simply add a link to the head of the HTML:
     />
 ```
 
+The advantage of CDN import is that the bootstrap file will be as close as possible as the client. This can reduce load time if for instance a French client requests a US server. The CDN bootstrap is hosted on multiple servers. Therefore the client will load the web page from the US server, but will load the CSS from it's French server. Can be meaningful for slower connections.
+
 
 
 
